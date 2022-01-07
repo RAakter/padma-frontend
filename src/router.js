@@ -59,7 +59,17 @@ const routes = [
     path: "/add/bill",
     name: "add-bill",
     component: () => import("./components/AddBill")
-  }
+  },
+  {
+    path: "/bill/list",
+    name: "bill-list",
+    component: () => import("./components/BillList")
+  },
+  {
+    path: "/bills/:id",
+    name: "bill-details",
+    component: () => import("./components/EditBill")
+  },
 ];
 
 const router = createRouter({

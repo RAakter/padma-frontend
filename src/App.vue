@@ -13,6 +13,9 @@
           <router-link to="/add" class="nav-link">Add Customer</router-link>
         </li>
         <li v-if="currentUser && currentUser.data.is_customer === 0">
+          <router-link to="/bill/list" class="nav-link">Bill list</router-link>
+        </li>
+        <li v-if="currentUser && currentUser.data.is_customer === 0">
           <router-link to="/add/bill" class="nav-link">Add Bill</router-link>
         </li>
       </div>

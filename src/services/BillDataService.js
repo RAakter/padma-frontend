@@ -16,6 +16,7 @@ class BillDataService {
   update(id, data) {
     return http.post(`/bills/update/${id}`, data);
   }
+
   findByStatus(status) {
     return http.get(`/filter/bills?status=${status}`);
   }
