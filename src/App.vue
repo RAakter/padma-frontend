@@ -6,13 +6,13 @@
         <li v-if="showCustomerBoard" class="nav-item">
           <router-link to="/customer" class="nav-link">Customer Board</router-link>
         </li>
-        <li v-if="currentUser">
+        <li v-if="currentUser && currentUser.data.is_customer === 0">
           <router-link to="/customers" class="nav-link">Customers</router-link>
         </li>
-        <li v-if="currentUser">
+        <li v-if="currentUser && currentUser.data.is_customer === 0">
           <router-link to="/add" class="nav-link">Add Customer</router-link>
         </li>
-        <li v-if="currentUser">
+        <li v-if="currentUser && currentUser.data.is_customer === 0">
           <router-link to="/add/bill" class="nav-link">Add Bill</router-link>
         </li>
       </div>

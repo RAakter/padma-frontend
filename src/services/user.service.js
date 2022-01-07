@@ -13,7 +13,7 @@ class UserService {
   }
 
   getCustomerBoard() {
-    return axios.get(API_URL + 'customers', { headers: authHeader() });
+    return axios.get(API_URL + 'bills', { headers: authHeader() });
   }
 }
 

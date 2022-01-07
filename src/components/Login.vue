@@ -8,7 +8,7 @@
       />
       <Form @submit="handleLogin" :validation-schema="schema">
         <div class="form-group">
-          <label for="username">Email</label>
+          <label for="email">Email</label>
           <Field name="email" type="text" class="form-control" />
           <ErrorMessage name="email" class="error-feedback" />
         </div>
@@ -68,7 +68,7 @@ export default {
   },
   created() {
     if (this.loggedIn) {
-      this.$router.push("orders");
+      this.$router.push("profile");
     }
   },
   methods: {
@@ -76,7 +76,7 @@ export default {
       this.loading = true;
       this.$store.dispatch("auth/login", user).then(
         () => {
-          this.$router.push("orders");
+          this.$router.push("profile");
         },
         (error) => {
           this.loading = false;
